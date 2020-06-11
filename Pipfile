@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 numpy = "*"
 pandas = "*"
+matplotlib = "*"
+scikit-learn = "*"
+jupyter = "*"
+tables = "*"
 
 [requires]
 python_version = "3.8"

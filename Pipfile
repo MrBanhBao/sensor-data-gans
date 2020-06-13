@@ -12,6 +12,9 @@ matplotlib = "*"
 scikit-learn = "*"
 jupyter = "*"
 tables = "*"
+tensorflow = "*"
+keras = "*"
+jupyterlab = "*"
 
 [requires]
 python_version = "3.8"

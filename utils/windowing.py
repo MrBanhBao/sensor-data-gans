@@ -64,9 +64,9 @@ def transform_windows_df(windowed_df: pd.DataFrame, input_cols: List[str], one_h
             col_stack.append(window[col])
 
         if as_channel:
-            x.append(np.array(col_stack).reshape(1, np.array(col_stack).shape[1], np.array(col_stack).shape[0]))
+            x.append(np.array(col_stack).reshape(np.array(col_stack).shape[1], 1, np.array(col_stack).shape[0]))
         else:
-            x.append(np.array(col_stack))
+            x.append(np.array(col_stack).transpose())
 
         if one_hot_encode:
             one_hot_vec = np.zeros(num_classes)

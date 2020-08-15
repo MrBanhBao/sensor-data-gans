@@ -22,3 +22,8 @@ def filter_by_activity_index(x: np.array, y: np.array, activity_idx: int) -> np.
         return x_activity.reshape(x_activity.shape[0], x_activity.shape[1]), y_activity
     else:
         return x_activity, y_activity
+
+
+def smooth_labels(labels, lower, upper, round_decimel=1, random_state=None):
+    n_samples = len(labels)
+    return labels + np.round(np.random.uniform(lower, upper, n_samples, random_state=random_state), round_decimel)[:, None]
